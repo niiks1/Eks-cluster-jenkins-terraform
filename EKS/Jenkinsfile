@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout SCM'){
             steps{
                 script{
-                    //Generate  using pipeline syntax
+                   checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/niiks1/Eks-cluster-jenkins-terraform.git']])
                 }
             }
         }
